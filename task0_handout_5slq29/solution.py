@@ -49,8 +49,8 @@ def log_posterior_probs(x):
     log_likelyhoods = np.array([ #1x3 array with likelyhoods of three possible distributions
         #for each of the three hypothesis, get probability. This is done by multiplying the probabilities of each single data point, which turns into a sum in the log space
         np.sum(HYPOTHESIS_SPACE[0].logpdf(x)), #normal distribution
-        np.sum(HYPOTHESIS_SPACE[0].logpdf(x)), #laplace distribution
-        np.sum(HYPOTHESIS_SPACE[0].logpdf(x)), #students t-distribution
+        np.sum(HYPOTHESIS_SPACE[1].logpdf(x)), #laplace distribution
+        np.sum(HYPOTHESIS_SPACE[2].logpdf(x)), #students t-distribution
     ])
 
     #next account for prior information
